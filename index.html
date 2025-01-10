@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM FOTOGRAFI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo" onclick="scrollToSection('home')"><img src="images/dream.png" alt="Dream Photography"></div>
+        <div class="nav-links">
+            <a href="#home" onclick="scrollToSection('home', event)">Home</a>
+            <a href="#gallery" onclick="scrollToSection('gallery', event)">Gallery</a>
+            <a href="#services" onclick="scrollToSection('services', event)">Services</a>
+            <a href="#feedback" onclick="scrollToSection('feedback', event)">Feedback</a>
+            <a href="#about" onclick="scrollToSection('about', event)">About Us</a>
+            <a href="#booking" onclick="scrollToSection('booking', event)">Order</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <!-- Tambahkan input radio untuk carousel tambahan -->
+                    <input type="radio" name="carousel-control" id="carousel-1" checked>
+                    <input type="radio" name="carousel-control" id="carousel-2">
+                    <input type="radio" name="carousel-control" id="carousel-3">
+                    <input type="radio" name="carousel-control" id="carousel-4">
+                    <input type="radio" name="carousel-control" id="carousel-5">
+                    <input type="radio" name="carousel-control" id="carousel-6">
+            
+                    <!-- Tambahkan slide baru -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-1.webp" alt="Landing Page - Foto wisuda perkelas">
+                                <div class="carousel-content">
+                                    <h3>Abadikan Momen Berkesan</h3>
+                                    <p class="carousel-sub-content">Foto Wisuda bersama wali kelas angkatan 2023.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="https://www.instagram.com/p/DAVtJ9ES1X6/?img_index=1">
+                                <img src="images/carousel-image-2.webp" alt="Mini Soccer Chickin Indonesia vs Jala">
+                                <div class="carousel-content">
+                                    <h3>Mini Soccer Chickin vs Jala</h3>
+                                    <p class="carousel-sub-content">Dokumentasi kegiatan Fun Match Mini Soccer CHICKIN Indonesia vs JALA.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-3.webp" alt="International Dance Yogyakarta">
+                                <div class="carousel-content">
+                                    <h3>International Dance Yogyakarta</h3>
+                                    <p class="carousel-sub-content">Dokumentasi kegiatan dance internasional dari segala penjuru dunia yang digelar di Yogyakarta.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-4.webp" alt="Jobfair Skaneka">
+                                <div class="carousel-content">
+                                    <h3>Jobfair SMKN 1 Kademangan</h3>
+                                    <p class="carousel-sub-content">Dokumentasi kegiatan Jobfair yang diadakan di SMK Negeri 1 Kademangan.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-5.webp" alt="Merayakan Kemerdekaan dengan Chickin Indonesia">
+                                <div class="carousel-content">
+                                    <h3>Rayakan Kemerdekaan Bersama Chickin</h3>
+                                    <p class="carousel-sub-content">Dokumentasi Kemeriahan Lomba 17 Agustus bersama Chickin Indonesia.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/carousel-image-6.webp" alt="Carousel Image 6">
+                                <div class="carousel-content">
+                                    <h3>Personal Branding Photoshoot</h3>
+                                    <p class="carousel-sub-content">Photoshoot untuk Personal Branding dan Company Profile Profesional.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+            
+                    <!-- Tambahkan label kontrol baru -->
+                    <div class="carousel-controls">
+                        <label for="carousel-1"></label>
+                        <label for="carousel-2"></label>
+                        <label for="carousel-3"></label>
+                        <label for="carousel-4"></label>
+                        <label for="carousel-5"></label>
+                        <label for="carousel-6"></label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="home-content">
+                <div class="home-text">
+                    <h1 class="headline">DREAM FOTOGRAFI</h1>
+                    <h2 class="line">Budget Pelajar Kualitas Sangar</h2>
+                    <p class="subline">Bersama Dream Fotografi abadikan momen pentingmu dengan visual yang terbaik !</p>
+                </div>
+                <div class="home-image">
+                    <img class="home-image-logo" src="images/dream-biru.png" alt="logo">
+                    <div class="social-links">
+                        <a href="mailto:juanmadhy425@gmail.com" class="social-icon">
+                            <img src="images/icon/email.svg" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/jeyy_prtf/" class="social-icon">
+                            <img src="images/icon/instagram.svg" alt="">
+                        </a>
+                        <a href="https://www.tiktok.com/@j4juanm/" class="social-icon">
+                            <img src="images/icon/tiktok.svg" alt="">
+                        </a>
+                        <a href="https://wa.me/+6288805385353?text=Terima%20kasih%20sudah%20menghubungi%20kami.%20Silakan%20tulis%20pertanyaan%20Anda." class="social-icon">
+                            <img src="images/icon/whatsapp.svg" alt="">
+                        </a>
+                        <!-- Tambahkan icon sosmed lainnya -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery">
+            <h1>OUR GALLERY</h1>
+            <div class="gallery-grid">
+                <a href="#" class="gallery-card"><img src="images/card1.webp" alt="Gallery 1"></a>
+                <a href="#" class="gallery-card"><img src="images/card2.webp" alt="Gallery 2"></a>
+                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
+                <!-- Tambahkan lebih banyak gambar -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <h1>Layanan Kami</h1>
+            <div class="services-grid">
+                <div class="service">
+                    <h2>Studio</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <button>Pesan Sekarang</button>
+                </div>
+                <div class="service">
+                    <h2>Outdoor</h2>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <button>Pesan Sekarang</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="feedback">
+            <h1>Testimonials</h1>
+            <div class="feedback-grid">
+                <div class="feedback-card">
+                    <h3>John Doe (5.0)</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <!-- Tambahkan lebih banyak testimoni -->
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <div class="social-links">
+                    <a href="mailto:example@example.com">Email</a>
+                    <a href="https://wa.me/123456789">WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="booking">
+            <h1>Booking</h1>
+            <form id="booking-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <select name="service" required>
+                    <option value="studio">Studio</option>
+                </select>
+                <input type="date" name="date" required>
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 DREAM FOTOGRAFI. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

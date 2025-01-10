@@ -1,0 +1,382 @@
+/* Root variables */
+:root {
+    --black: #000000;
+    --dark: #161617;
+    --light: #cccccc;
+    --lighter: #f5f5f7;
+    --white: #ffffff;
+    --blue-accent: #0A84FF;
+    --blue-first: #00CBFF;
+    --blue-light: #66DFFF;
+    --blue-dark: #0080af;
+    --gray: #1d1d1f;
+    --gray-light: #3a3a3a;
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+    
+}
+
+body {
+    background-color: var(--lighter);
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+section {
+padding-bottom: 2%;
+}
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgba(0, 204, 255, 0.809);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    padding-top: 5px;
+    align-items: center;
+}
+
+.logo img{
+    max-width: 125px;
+}
+
+.nav-links a {
+    color: var(--lighter);
+    text-decoration: none;
+    margin-left: 10px;
+    transition: color 0.3s;
+    font-weight: 5  00;
+}
+
+.nav-links a:hover {
+    color: var(--gray);
+}
+
+
+/* Home Section */
+.home {
+    padding-top: 0px;
+    min-height: 100vh;
+}
+
+/* Carousel */
+.carousel-container {
+    width: 100%;
+    top: 100px;
+}
+
+.carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel input[type="radio"] {
+    display: none;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 600%; /* Disesuaikan untuk 6 item */
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    width: 16.666%; /* 100% / 6 = 16.666% */
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    height: auto;
+    aspect-ratio: 4.3 / 1;
+    object-fit: cover;
+}
+
+.carousel-content {
+    padding: 50px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.854), transparent);
+    color: var(--lighter);
+}
+
+.carousel-sub-content {
+    color: var(--light);
+
+}
+
+/* Carousel radio control logic */
+#carousel-1:checked ~ .carousel-inner {
+    transform: translateX(0%);
+}
+#carousel-2:checked ~ .carousel-inner {
+    transform: translateX(-16.666%);
+}
+#carousel-3:checked ~ .carousel-inner {
+    transform: translateX(-33.333%);
+}
+#carousel-4:checked ~ .carousel-inner {
+    transform: translateX(-50%);
+}
+#carousel-5:checked ~ .carousel-inner {
+    transform: translateX(-66.666%);
+}
+#carousel-6:checked ~ .carousel-inner {
+    transform: translateX(-83.333%);
+}
+
+.carousel-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-controls label {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-controls label:hover,
+input[type="radio"]:checked + label {
+    background-color: var(--accent-blue);
+}
+
+.home-content {
+    padding: 5%;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.headline {
+    font-size: 2.5rem;
+    color: var(--blue-first);
+    left: 0px;
+    letter-spacing: 5px;
+}
+
+.line {
+    color: var(--blue-dark);
+    margin-left: 10px;
+}
+
+.subline {
+    color: var(--gray);
+    margin-left: 10px;
+}
+
+.home-image {
+    right: 0px;
+    
+}
+
+.home-image-logo {
+    max-width: 450px;
+    padding: 15%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    color: var(--light);
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* .home h2 {
+    font-size: 1.5rem;
+    color: var(--gray-light);
+    margin: 10px 0;
+}
+
+.home p {
+    color: var(--gray);
+    max-width: 600px;
+} */
+
+
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 50px 5%;
+}
+
+.gallery h1 {
+    margin-bottom: 20px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-card img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.gallery-card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Services Section */
+.services {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--dark);
+    border-radius: 10px;
+}
+
+.service h2 {
+    margin-bottom: 10px;
+}
+
+.service ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.service button {
+    background-color: var(--blue-accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.service button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Feedback Section */
+.feedback {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.feedback-card {
+    background-color: var(--dark);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.social-links a {
+    color: var(--blue-accent);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Booking Section */
+.booking {
+    padding: 50px 5%;
+    text-align: center;
+}
+
+.booking form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.booking input,
+.booking select,
+.booking textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid var(--light);
+    border-radius: 5px;
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.booking button {
+    background-color: var(--blue-accent);
+    color: var(--white);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--gray);
+    color: var(--light);
+}
