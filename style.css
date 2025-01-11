@@ -33,6 +33,7 @@ body {
 section {
 padding-bottom: 20%;
 }
+
 /* Navbar */
 nav {   
     display: flex;
@@ -58,6 +59,8 @@ nav {
     max-width: 125px;
 }
 
+
+
 .nav-links a {
     color: var(--lighter);
     text-decoration: none;
@@ -70,6 +73,21 @@ nav {
     color: var(--gray);
 }
 
+
+/* Hamburger styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
 
 /* Home Section */
 .home {
@@ -382,6 +400,31 @@ footer {
 
     .nav-links {
         margin-top: 20px;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links {
+        height: 100vh;
+        list-style: none;
+        display: flex;
+        display: none;
+        top: 0px; /* Sesuaikan dengan tinggi navbar */
+        right: 20px;
+        flex-direction: column;
+        position: absolute;
+        background-color: #00bfff; /* Sesuaikan */
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: ease-in-out;
+        animation: ease-in-out;
     }
 
     .carousel-content {

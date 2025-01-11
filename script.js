@@ -6,6 +6,11 @@ function scrollToSection(sectionId, event) {
     });
 }
 
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+}
+
 const radios = document.querySelectorAll('input[name="carousel-control"]');
 const labels = document.querySelectorAll('.carousel-controls label');
 let currentIndex = 0;
