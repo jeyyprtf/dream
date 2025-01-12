@@ -363,6 +363,10 @@ input[type="radio"]:checked + label {
     color: var(--lighter);
 }
 
+.rating {
+    color: gold;
+}
+
 /* About Us Section */
 .about {
     padding: 50px 5%;
