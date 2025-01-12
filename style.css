@@ -3,6 +3,7 @@
     --black: #000000;
     --dark: #161617;
     --light: #cccccc;
+    --light1: #dadada;
     --lighter: #f5f5f7;
     --white: #ffffff;
     --blue-accent: #0A84FF;
@@ -28,10 +29,6 @@ body {
     background-color: var(--lighter);
     color: var(--gray);
     line-height: 1.6;
-}
-
-section {
-padding-bottom: 20%;
 }
 
 /* Navbar */
@@ -92,7 +89,7 @@ nav {
 /* Home Section */
 .home {
     padding-top: 0px;
-    min-height: 100vh;
+    padding-bottom: 10vh;
 }
 
 /* Carousel */
@@ -194,6 +191,7 @@ input[type="radio"]:checked + label {
 .home-content {
     padding: 5%;
     padding-top: 5%;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -246,11 +244,11 @@ input[type="radio"]:checked + label {
 /* Gallery Section */
 .gallery {
     text-align: center;
-    padding: 100px 5%;
+    padding: 100px 5% 0px;
 }
 
 .gallery h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .gallery-grid {
@@ -263,17 +261,30 @@ input[type="radio"]:checked + label {
     width: 100%;
     border-radius: 10px;
     transition: transform 0.3s, filter 0.3s;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    filter: brightness(0.9);
 }
 
 .gallery-card img:hover {
     transform: scale(1.05);
-    filter: brightness(1.2);
+    filter: brightness(1.1);
 }
 
 /* Services Section */
 .services {
     padding: 100px 5%;
     text-align: center;
+}
+
+.services h1 {
+    padding-bottom: 30px;
+}
+
+.services-headline {
+    color: var(--lighter);
+    letter-spacing: 10px;
+    padding-bottom: 10px;
 }
 
 .services-grid {
@@ -285,7 +296,7 @@ input[type="radio"]:checked + label {
 .service {
     flex: 1;
     padding: 20px;
-    background-color: var(--dark);
+    background-color: #0080af6b;
     border-radius: 10px;
 }
 
@@ -294,8 +305,18 @@ input[type="radio"]:checked + label {
 }
 
 .service ul {
-    list-style: none;
     margin-bottom: 20px;
+    align-items: center;
+    padding-right: 10% ;
+    padding-left: 10% ;
+}
+
+.service li {
+    text-align: left;
+    padding-bottom: 5px;
+    font-weight: 500;
+    word-spacing: 2px;
+    color: var(--gray);
 }
 
 .service button {
@@ -303,19 +324,26 @@ input[type="radio"]:checked + label {
     color: var(--white);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    transition: filter 0.2s;
+    word-spacing: 2px;
 }
 
 .service button:hover {
-    background-color: var(--white);
-    color: var(--black);
+    filter: brightness(1.5);
+    /* background-color: var(--white);
+    color: var(--black); */
 }
 
 /* Feedback Section */
 .feedback {
     padding: 100px 5%;
     text-align: center;
+}
+
+.feedback h1 {
+    padding-bottom: 30px;
 }
 
 .feedback-grid {
@@ -325,9 +353,14 @@ input[type="radio"]:checked + label {
 }
 
 .feedback-card {
-    background-color: var(--dark);
+    background-color: #0080af6b;
+    color: var(--gray);
     padding: 20px;
     border-radius: 10px;
+}
+
+.feedback-card h3 {
+    color: var(--lighter);
 }
 
 /* About Us Section */
@@ -348,6 +381,10 @@ input[type="radio"]:checked + label {
     text-align: center;
 }
 
+.booking h1 {
+    padding-bottom: 30px;
+}
+
 .booking form {
     max-width: 600px;
     margin: 0 auto;
@@ -359,10 +396,16 @@ input[type="radio"]:checked + label {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid var(--light);
-    border-radius: 5px;
-    background-color: var(--dark);
-    color: var(--light);
+    border: 1px solid var(--lighter);
+    border-radius: 15px;
+    background-color: var(--blue-first);
+    color: var(--white);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.booking ::placeholder {
+    color: var(--gray);
 }
 
 .booking button {
@@ -370,13 +413,15 @@ input[type="radio"]:checked + label {
     color: var(--white);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: filter 0.2s;
 }
 
 .booking button:hover {
-    background-color: var(--white);
-    color: var(--black);
+    filter: brightness(1.5);
 }
 
 /* Footer */
@@ -387,44 +432,62 @@ footer {
     color: var(--light);
 }
 
+@media (max-width: 859px) {
+    .home-image-logo {
+        padding: 12%;
+        max-width: 400px;
+    }
+
+    .service li {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 768px) {
 
     body {
         width: 100%;
     }
 
+    .logo img{
+        width: 70px;
+    }
+
     nav {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        padding: 10px;
     }
 
     .nav-links {
         margin-top: 20px;
-        align-items: center;
     }
 
     .hamburger {
         display: flex;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
-
     .nav-links {
-        height: 100vh;
+        height: 22vh;
         list-style: none;
-        display: flex;
         display: none;
-        top: 0px; /* Sesuaikan dengan tinggi navbar */
-        right: 20px;
+        top: -100vh; /* Start from above the viewport */
         flex-direction: column;
         position: absolute;
-        background-color: #00bfff; /* Sesuaikan */
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: ease-in-out;
-        animation: ease-in-out;
+        background-color: rgba(0, 204, 255, 0.5); /* More transparent background */
+        padding: 20px;
+        border-radius: 0px 0px 0px 25px;
+    }
+
+    .nav-links.active {
+        right: 0;
+        display: flex;
+        top:31px;
+        opacity: 1;
+        animation: slideDown 0.3s ease-in-out forwards;
+    }
+
+    .nav-links a {
+        padding-bottom: 2px;
     }
 
     .carousel-content {
@@ -488,27 +551,25 @@ footer {
     }
 
     .gallery {
-        padding: 170px 5%;
+        padding: 70px 5% 10px;
     }
 
     .projects {
         padding-bottom: 20%;
     }
 
-    .project-grid {
-        grid-template-columns: 1fr;
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
     }
 
-    .project-card {
-        size: 80vh;
+    .gallery-card img {
+        aspect-ratio: 3/4;
+        object-fit: cover;
     }
 
     .carousel-item img {
         aspect-ratio: 16/9;
-    }
-
-    .home-desc {
-        max-width: 100%;
     }
 
     .section {
@@ -538,6 +599,35 @@ footer {
         /* padding-bottom: 100px; */
     }
 
+    .service {
+
+    }
+
+    .services-headline {
+        font-size: 1.3rem;
+    }
+
+    .service ul {
+        padding-left: 3%;
+        padding-right: 0%;
+    }
+
+    .service li {
+        font-size: 0.8rem;
+    }
+
+    .feedback-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .feedback-card h3 {
+        padding-bottom: 15px;
+    }
+
+    .feedback-card p {
+        font-size: 0.8rem;
+    }
+
     .about {
         padding-top: 55px;
     }
@@ -565,6 +655,17 @@ footer {
     }
 }
 
+@media (max-width: 530px) {
+    .services-headline {
+        font-size: 1.2rem;
+        letter-spacing: 5px;
+    }
+
+    .service li {
+        font-size: 0.7rem;
+    }
+}
+
 @media (max-width: 450px) {
     .carousel-container {
 
@@ -572,5 +673,22 @@ footer {
 
     .line {
         font-size: 1.3rem;
+    }
+
+    .service {
+        padding-right: 8px;
+    }
+
+    .services-headline {
+        letter-spacing: 2px;
+    }
+
+    .service li {
+        font-size: 0.6rem;
+    }
+
+    .service button {
+        padding: 5px 10px 5px ;
+        font-size: 0.8rem;
     }
 }

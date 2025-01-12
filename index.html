@@ -142,76 +142,99 @@
         <section id="gallery" class="gallery">
             <h1>OUR GALLERY</h1>
             <div class="gallery-grid">
-                <a href="#" class="gallery-card"><img src="images/card1.webp" alt="Gallery 1"></a>
-                <a href="#" class="gallery-card"><img src="images/card2.webp" alt="Gallery 2"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
+                <div class="gallery-card-container">
+                    <a href="#" class="gallery-card"><img src="images/card1.webp" alt="Gallery 1"></a>
+                </div>
+                <div class="gallery-card-container">
+                    <a href="#" class="gallery-card"><img src="images/card2.webp" alt="Gallery 2"></a>
+                </div>
+                <div class="gallery-card-container">
                     <a href="#" class="gallery-card"><img src="images/card3.webp" alt="Gallery 3"></a>
-                <!-- Tambahkan lebih banyak gambar -->
+                </div>
+                <div class="gallery-card-container">
+                    <a href="#" class="gallery-card"><img src="images/card4.webp" alt="Gallery 4"></a>
+                </div>
+                <div class="gallery-card-container">
+                    <a href="#" class="gallery-card"><img src="images/card5.webp" alt="Gallery 5"></a>
+                </div>
+                <div class="gallery-card-container">
+                    <a href="#" class="gallery-card"><img src="images/card6.webp" alt="Gallery 6"></a>
+                </div>
             </div>
         </section>
 
         <!-- Services Section -->
         <section id="services" class="services">
-            <h1>Layanan Kami</h1>
+            <h1 >Layanan Kami</h1>
             <div class="services-grid">
                 <div class="service">
-                    <h2>Studio</h2>
+                    <h2 class="services-headline">STUDIO</h2>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Pemotretan dengan latar Profesional</li>
+                        <li>Foto Produk dan Semacamnya</li>
+                        <li>Foto Close up / Headshot Profesional untuk CV</li>
+                        <li>Foto Pas Foto dengan Background Merah / Biru</li>
+                        <li>Foto Studio dengan Background GreenScreen</li>
+                        <li>Foto Bareng dengan teman, keluarga, maupun pasangan</li>
+                        <li>Foto kelulusan Sendiri maupun Bareng</li>
+                        <li>Foto Bareng Waifu (coming soon)</li>
                     </ul>
-                    <button>Pesan Sekarang</button>
+                    <button onclick="handleServiceClick('studio', event)">Pesan Sekarang</button>
                 </div>
                 <div class="service">
-                    <h2>Outdoor</h2>
+                    <h2 class="services-headline">OUTDOOR</h2>
                     <ul>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Looks Foto yang lebih natural</li>
+                        <li>Pemotretan Profesional dimana saja kapan saja</li>
+                        <li>Dokumentasikan Acaramu dengan Visual Terbaik</li>
+                        <li>Foto Acara Perayaan, Acara Peresmian, dan Acara Lainnya</li>
+                        <li>Foto Kelulusan di sekolah maupun tempat wisata</li>
+                        <li>Foto Angkatan di sekolah maupun tempat wisata</li>
+                        <li>Fotografer Profesional dimanapun anda berada</li>
+                        <li>Dokumentasi Kegiatan Formal maupun Kasual</li>
                     </ul>
-                    <button>Pesan Sekarang</button>
+                   <button onclick="handleServiceClick('outdoor', event)">Pesan Sekarang</button>
                 </div>
             </div>
         </section>
 
         <!-- Feedback Section -->
         <section id="feedback" class="feedback">
-            <h1>Testimonials</h1>
+            <h1>Testimoni</h1>
             <div class="feedback-grid">
+                <div class="feedback-card">
+                    <h3>Pak Eko (4.5)</h3>
+                    <p>Hasil foto dokumentasi karnaval bagus vidio cinematic nya juga bagus</p>
+                </div>
+                <div class="feedback-card">
+                    <h3>John Doe (5.0)</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="feedback-card">
+                    <h3>John Doe (5.0)</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
                 <div class="feedback-card">
                     <h3>John Doe (5.0)</h3>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
                 <!-- Tambahkan lebih banyak testimoni -->
             </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="booking">
+            <h1>Booking Sekarang</h1>
+            <form id="booking-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <select name="service" required>
+                    <option value="studio">Studio</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+                <input type="date" name="date" required>
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit">Pesan Sekarang</button>
+            </form>
         </section>
 
         <!-- About Us Section -->
@@ -225,21 +248,9 @@
                 </div>
             </div>
         </section>
-
-        <!-- Booking Section -->
-        <section id="booking" class="booking">
-            <h1>Booking</h1>
-            <form id="booking-form">
-                <input type="text" name="name" placeholder="Name" required>
-                <select name="service" required>
-                    <option value="studio">Studio</option>
-                </select>
-                <input type="date" name="date" required>
-                <textarea name="message" placeholder="Message"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
     </main>
+
+
 
     <footer>
         <p>&copy; 2025 DREAM FOTOGRAFI. All Rights Reserved.</p>

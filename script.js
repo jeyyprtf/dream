@@ -43,7 +43,21 @@ updateActiveLabel();
 // Jalankan autoSwipe setiap 5 detik
 setInterval(autoSwipe, 3000);
 
-// Booking form submission
+
+function handleServiceClick(serviceType, event) {
+    // Scroll ke bagian booking
+    scrollToSection('booking', event);
+
+    // Cari elemen dropdown service
+    const serviceSelect = document.querySelector('select[name="service"]');
+    
+    setTimeout(() => {
+        serviceSelect.value = serviceType;
+    }, 100);
+}
+
+
+
 document.getElementById('booking-form').addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -52,7 +66,7 @@ document.getElementById('booking-form').addEventListener('submit', function (e) 
     const date = this.date.value;
     const message = this.message.value;
 
-    const whatsappURL = `https://wa.me/+6281358534557?text=Name:%20${encodeURIComponent(
+    const whatsappURL = `https://wa.me/+6288805385353?text=Name:%20${encodeURIComponent(
         name
     )}%0AService:%20${encodeURIComponent(service)}%0ADate:%20${encodeURIComponent(
         date
